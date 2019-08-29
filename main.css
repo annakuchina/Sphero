@@ -1,3 +1,8 @@
+@font-face {
+    font-family: silent-reaction;
+    src: url(silent-reaction.ttf);
+  }
+
 body {
     font-family: 'Open Sans', sans-serif;
 box-sizing: border-box;
@@ -7,7 +12,6 @@ padding: 0px;
 
 .hero {
 position: relative;
-background: 
 }
 
 .codebox {
@@ -25,7 +29,7 @@ font-size: 250px;
 text-align: center;
  padding-top: 17vh;
 color: #8efff5;
-font-family: 'Limelight', cursive;
+font-family: 'silent-reaction';
 }
 
 
