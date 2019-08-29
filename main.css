@@ -1,0 +1,64 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+}
+
+.hero {
+position: relative;
+background: 
+}
+
+.codebox {
+background: url("https://c1.staticflickr.com/65535/48377347541_aa21a260af_b.jpg") no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 100vh;
+
+}
+
+.bigheader {
+font-size: 250px;
+text-align: center;
+ padding-top: 17vh;
+color: #8efff5;
+font-family: 'Limelight', cursive;
+}
+
+
+
+@media screen and (min-width: 1025px) {
+.aitext {
+  margin-top: 0;
+}
+}
+
+@media screen and (max-width: 1024px) {
+.aitext {
+  margin-top: 10vh;
+}
+}
+
+
+
+@media screen and (max-width: 700px) {
+.bigheader {font-size: 250px;
+}
+.aitext {
+padding-top: 100px;
+}
+}
+
+@media screen and (max-width: 320px) {
+.bigheader {
+  font-size: 200px;
+      padding-top: 70px;
+
+}
+
+
+}
+
