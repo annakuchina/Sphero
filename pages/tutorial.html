@@ -1,0 +1,224 @@
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Molle:400i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Limelight&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<body>
+  
+  <div class="navbar">
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" id="menu-checkbox">
+
+        <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+        <ul id="menu">
+          <a href="#home">
+            <ili>Home</a>
+          <br>
+          <div class="ilipadding"></div>
+          <a href="#gettingstarted ">
+            <ili>Getting Started</a>
+          <br>
+          <div class="ilipadding"></div>
+          <a href="#tutorial">
+            <ili>Tutorial</a>
+
+          <br>
+          <div class="ilipadding"></div>
+          <a href="#videotutorial">
+            <ili>Video Tutorial</a>
+
+          <br>
+          <div class="ilipadding"></div>
+          <a href="#resources">
+            <ili>Resouces</a>
+
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+  
+  
+  <hero>
+        <div class="mainmargin" id="tutorial">
+                <div class="mainpage">
+                <div class="header">Tutorial</div>
+                </div>
+                
+                <div class="codesection roll">
+              <p style="margin-bottom: -25px;">Using JavaScript, there are many possible ways to program a Sphero.</p>
+                  <div class="miniheader">Roll</div>
+                  <p>The following code will make the sphero roll in direction 0° at 100 speed for 2 seconds:</p>
+                  <div class="codeblock">
+                  <code>
+                    <pre>
+              async function startProgram() {
+                await roll(0, 100, 2);
+              }
+          </pre>
+                </code>
+                  </div>
+                <div class="container">
+          <iframe src="https://www.youtube.com/embed/qh3b31AIYII" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+              </div>
+                
+                <div class="codesection colours">
+                  <div class="miniheader">Colours</div>
+                  <p>The following program will make the Sphero set its backlight LED to full brightness, fade from blue to pink over 4 seconds and then make it strobe green three times until it permanently remains green until the program ends.
+          </p>
+          <div class="codeblock">
+                  <code>
+                    <pre>
+            async function startProgram() {
+              setBackLed(255);
+              await fade({ r: 6, 
+              g: 13, b: 255 },
+              
+              { r: 255, g: 0, 
+              b: 187 }, 4);
+              
+                await strobe({ r: 4, g: 255, 
+              b: 14}, 2, 3);
+            }
+          </pre>
+                </code>
+                  </div>
+                  <div class="container">
+          <iframe src="https://www.youtube.com/embed/NJAZ9dVr6dE" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+                </div>
+                      
+                <div class="codesection spin">
+                  <div class="miniheader">Spin</div>
+                  <p>
+                  The following program will spin the Sphero at 1080° for 2 seconds, then set its raw motor at -255 for left, 255 for right for 3 seconds:</p>
+                 <div class="codeblock">
+                  <code>
+                    <pre>
+            async function startProgram() {
+                await spin(1080, 2);
+                await rawMotor(-255, 255, 3);
+            }
+          </pre>
+                </code>
+                  </div>
+                  
+                  <div class="container">
+          <iframe src="https://www.youtube.com/embed/mDzqHEX2TfI" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+                  
+                </div>
+                
+                <div class="codesection audio">
+                  <div class="miniheader">Audio</div>
+                  <p>
+                  This program will make the Sphero play a random sound:</p>
+                  <div class="codeblock">
+                    <code>
+                      <pre>
+                 async function startProgram() {
+                await Sound.play(true);
+            }
+          </pre>
+                    </code>
+                  </div>
+                  
+                  <div class="container">
+          <iframe src="https://www.youtube.com/embed/Di-D4YR29Ns" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+                </div>
+                
+                <div class="codesection collision">
+                  <div class="miniheader">Collision</div><p>
+                  This program will make the Sphero roll at 0° at 70 speed for 2 seconds, then on collision, it will make the Sphero turn pink.</p>
+                  <div class="codeblock">
+          <code>
+            <pre>
+              async function startProgram() {
+                  await roll(0, 70, 2);
+            }
+          
+             async function onCollision() {
+                  setMainLed({ r: 255, 
+                g: 41, b: 29 });
+            }
+            
+            registerEvent(EventType.onCollision,
+            onCollision);
+           </pre>
+            </code>
+                  </div>
+                  <div class="container">
+          <iframe src="https://www.youtube.com/embed/JKmxQzsLGWw" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+                </div>
+                
+                <div class="codesection loop">
+                  <div class="miniheader">Loop</div>
+                  <p>
+                  This program will make the Sphero fade from green to purple over 1 second with a delay of 0.025 on a loop of 5 times.
+                </p>
+                <div class="codeblock">
+                <code>
+                  <pre>
+              async function startProgram() {
+                  for (var _i0 = 0; _i0 
+                &#60; 5; ++_i0) {
+                
+              await fade({ r: 43, 
+                g: 255, b: 13 }, 
+                { r: 172, g: 1, 
+                b: 255 }, 1);
+                  
+                await fade({ r: 172, 
+                g: 1, b: 255 }, 
+                { r: 43, g: 255, 
+                b: 13 }, 1);
+              await delay(0.025);
+                }
+            }
+          </pre>
+                </code>
+                  </div>
+                  <div class="container">
+          <iframe src="https://www.youtube.com/embed/zFc39KJGUnQ" 
+          frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+                
+                <footer>
+    
+                        <div class="anna"><i class="fas fa-copyright"></i> anna kuchina
+                          </div>
+                        
+                        </footer>
+                        </hero>
+                        
+                        </body>

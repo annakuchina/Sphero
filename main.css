@@ -1,68 +1,374 @@
-@font-face {
-    font-family: silent-reaction;
-    src: url(silent-reaction.ttf);
-  }
-
 body {
-    font-family: 'Open Sans', sans-serif;
-box-sizing: border-box;
-margin: 0px;
-padding: 0px;
+  font-family: 'Livvic', sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(68, 68, 68);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+p {
+  padding-bottom: 5px;
+}
+
+a {
+  color: #2aabe2;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #7ecdee;
+}
+
+li {
+  color: #2aabe2;
+  list-style-type: circle;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  position: fixed;
+  z-index: 2;
+      -webkit-box-shadow: 0 0px 6px 0px #999;
+    -moz-box-shadow: 0 0px 6px 0px #999;
+    box-shadow: 0 0px 6px 0px #999;
+}
+
+
+
+#navigation-top {
+  box-shadow: 8px 5px 4px rgba(23, 227, 131, 0.7);
+}
+
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  z-index: 5;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #2aabe2;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #2aabe2;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+    background: #2aabe2;
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+      background: #2aabe2;
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+    width: 100%;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: rgb(252, 252, 252, 0.98);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+      height: 100vh
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/*
+ * END OF MENU THING
+ */
+
+
+code {
+  font-size: 12px;
+  padding: 10px;
+  color: white;
+}
+
+.codeblock {
+  background-color: #7ecdee;
+  width: 100%;
+    height: 100%;
+  border-radius: 25px;
 }
 
 .hero {
-position: relative;
+  position: relative;
 }
 
 .codebox {
-background: url("https://c1.staticflickr.com/65535/48377347541_aa21a260af_b.jpg") no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-height: 100vh;
-
+  background: url("https://c1.staticflickr.com/65535/48710186606_efa2295e57_k.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  
 }
 
 .bigheader {
-font-size: 250px;
-text-align: center;
- padding-top: 17vh;
-color: #8efff5;
-font-family: 'Sacramento', cursive;
+  font-size: 250px;
+  text-align: center;
+   padding-top: 10vh;
+  color: white;
+font-family: 'Cookie', cursive;
+  text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
+
 }
 
+.statement {
 
+}
 
-@media screen and (min-width: 1025px) {
 .aitext {
-  margin-top: 0;
-}
-}
-
-@media screen and (max-width: 1024px) {
-.aitext {
-  margin-top: 10vh;
-}
+  line-height: 1.05;
 }
 
-
-
-@media screen and (max-width: 700px) {
-.bigheader {font-size: 250px;
-}
-.aitext {
-padding-top: 100px;
-}
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  margin-top: 40px;
 }
 
-@media screen and (max-width: 320px) {
-.bigheader {
-  font-size: 200px;
-      padding-top: 70px;
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   border-radius: 15px;
+}
 
+/* MAIN THINGS
+ */
+  .aitext {
+    font-size: 120px;
+     margin-top: 15vh;
+  }
+
+  .header {
+    font-size: 50px;
+    font-family: 'Cookie', cursive;
+      color: #5ec0ea;
+      margin-bottom: -16px;
+    padding-top: 15px;
+  }
+  
+  .miniheader {
+    font-size: 40px;
+     font-family: 'Cookie', cursive;
+    color: #5ec0ea;
+    margin-bottom: -16px;
+    margin-top: 50px;
+  }
+  
+  .javaminiheader {
+    font-size: 40px;
+    font-family: 'Cookie', cursive;
+    color: #5ec0ea;
+    padding-top: 15px;
+    margin-bottom: -7px;
+  }
+  
+  .headerpage {
+    font-size: 60px;
+    font-family: 'Cookie', cursive;
+      color: #2aabe2;
+      margin-bottom: -16px;
+  }
+  
+  .statement {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .mainmargin {
+        margin-left: 40px;
+    margin-right: 40px;
+  }
+
+ .blogpicture {
+    object-fit: contain;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
+.bluetext {
+  color: #2aabe2;
+  padding-top: 15px;
 }
 
 
+
+
+@media screen and (min-width: 500px) {
+ .mainmargin {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+  
 }
 
+@media screen and (min-width: 660px) {
+  .aitext {
+    font-size: 170px;
+  }
+  .mainmargin {
+    margin-left: 130px;
+    margin-right: 130px;
+}
+  
+  code {
+    font-size: 20px;
+  }
+  
+}
+
+
+@media screen and (min-width: 800px) {
+  .mainmargin {
+    max-width: 600px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin: auto;
+  }
+
+  body {
+      font-size: 21px;
+  }
+  
+  .header {
+    font-size: 70px;
+  }
+  
+  .headerpage {
+    font-size: 90px;
+  }
+  
+  .aitext {
+    font-size: 200px;
+    margin-top: 14vh;
+  }
+  
+  .miniheader {
+    font-size: 70px;
+  }
+  
+  .javaminiheader {
+    font-size: 70px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  
+}
+
+
+
+.anna {
+  color: white;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+font-size: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  background-color: #7ecdee;
+  margin-top: 85px;
+  text-align: center;
+}
