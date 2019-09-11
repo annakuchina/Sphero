@@ -84,14 +84,14 @@
                 
                 <div class="codesection roll">
               <p style="margin-bottom: -25px;">Using JavaScript, there are many possible ways to program a Sphero.</p>
-                  <div class="miniheader">Roll</div>
+                  <div class="header">Roll</div>
                   <p>The following code will make the sphero roll in direction 0° at 100 speed for 2 seconds:</p>
                   <div class="codeblock">
                   <code>
                     <pre>
-              async function startProgram() {
-                await roll(0, 100, 2);
-              }
+      async function startProgram() {
+          await roll(0, 100, 2);
+        }
           </pre>
                 </code>
                   </div>
@@ -102,23 +102,23 @@
               </div>
                 
                 <div class="codesection colours">
-                  <div class="miniheader">Colours</div>
+                  <div class="header">Colours</div>
                   <p>The following program will make the Sphero set its backlight LED to full brightness, fade from blue to pink over 4 seconds and then make it strobe green three times until it permanently remains green until the program ends.
           </p>
           <div class="codeblock">
                   <code>
                     <pre>
-            async function startProgram() {
-              setBackLed(255);
-              await fade({ r: 6, 
-              g: 13, b: 255 },
+      async function startProgram() {
+          setBackLed(255);
+            await fade({ r: 6, 
+            g: 13, b: 255 },
               
-              { r: 255, g: 0, 
-              b: 187 }, 4);
+            { r: 255, g: 0, 
+            b: 187 }, 4);
               
-                await strobe({ r: 4, g: 255, 
-              b: 14}, 2, 3);
-            }
+            await strobe({ r: 4, g: 255, 
+            b: 14}, 2, 3);
+          }
           </pre>
                 </code>
                   </div>
@@ -129,13 +129,13 @@
                 </div>
                       
                 <div class="codesection spin">
-                  <div class="miniheader">Spin</div>
+                  <div class="header">Spin</div>
                   <p>
                   The following program will spin the Sphero at 1080° for 2 seconds, then set its raw motor at -255 for left, 255 for right for 3 seconds:</p>
                  <div class="codeblock">
                   <code>
                     <pre>
-            async function startProgram() {
+       async function startProgram() {
                 await spin(1080, 2);
                 await rawMotor(-255, 255, 3);
             }
@@ -151,7 +151,7 @@
                 </div>
                 
                 <div class="codesection audio">
-                  <div class="miniheader">Audio</div>
+                  <div class="header">Audio</div>
                   <p>
                   This program will make the Sphero play a random sound:</p>
                   <div class="codeblock">
@@ -171,7 +171,7 @@
                 </div>
                 
                 <div class="codesection collision">
-                  <div class="miniheader">Collision</div><p>
+                  <div class="header">Collision</div><p>
                   This program will make the Sphero roll at 0° at 70 speed for 2 seconds, then on collision, it will make the Sphero turn pink.</p>
                   <div class="codeblock">
           <code>
@@ -197,7 +197,7 @@
                 </div>
                 
                 <div class="codesection loop">
-                  <div class="miniheader">Loop</div>
+                  <div class="header">Loop</div>
                   <p>
                   This program will make the Sphero fade from green to purple over 1 second with a delay of 0.025 on a loop of 5 times.
                 </p>
@@ -232,7 +232,7 @@
                 
                 <footer>
     
-                        <div class="anna"><i class="fas fa-copyright"></i> anna kuchina
+                        <div class="anna"><i class="fas fa-copyright"></i><br>anna kuchina
                           </div>
                         
                         </footer>
