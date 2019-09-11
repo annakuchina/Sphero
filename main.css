@@ -196,6 +196,27 @@ code {
   
 }
 
+
+
+.subpagebox {
+  background: rgb(94, 192, 234) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  
+}
+
+.subbigheader {
+  font-size: 180px;
+  text-align: center;
+   padding-top: 10vh;
+  color: white;
+font-family: 'Cookie', cursive;
+  text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
+}
+
 .bigheader {
   font-size: 250px;
   text-align: center;
@@ -206,13 +227,7 @@ font-family: 'Cookie', cursive;
 
 }
 
-.statement {
 
-}
-
-.aitext {
-  line-height: 1.05;
-}
 
 .container {
     position: relative;
@@ -236,6 +251,7 @@ font-family: 'Cookie', cursive;
   .aitext {
     font-size: 120px;
      margin-top: 15vh;
+     line-height: 1.05
   }
 
   .header {
@@ -302,9 +318,14 @@ font-family: 'Cookie', cursive;
 }
 
 @media screen and (min-width: 660px) {
-  .aitext {
+  .bigheader {
     font-size: 170px;
   }
+
+  .subbigheader {
+    font-size: 120px;
+  }
+
   .mainmargin {
     margin-left: 130px;
     margin-right: 130px;
@@ -338,8 +359,16 @@ font-family: 'Cookie', cursive;
   }
   
   .aitext {
+    font-size: 250px;
+  }
+
+  .bigheader {
     font-size: 200px;
-    margin-top: 14vh;
+  }
+
+  .subbigheader {
+    font-size: 140px;
+    margin-top: 12vh;
   }
   
   .miniheader {
