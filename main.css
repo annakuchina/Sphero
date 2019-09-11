@@ -215,6 +215,7 @@ code {
   color: white;
 font-family: 'Cookie', cursive;
   text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
+  line-height: 1.05;
   }
 
   .subbigheader {
