@@ -202,6 +202,14 @@ code {
   margin-bottom: 30px;
 }
 
+.speccontainer {
+   position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 400px;
+    margin-top: 30vh;
+}
+
 .video {
     position: absolute;
     top: 0;
@@ -213,6 +221,16 @@ code {
 
 /* MAIN THINGS
  */
+
+ .bigvidcontainer {
+  background: rgb(255, 255, 255) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 70vh;
+
+ }
   .bigheader {
     font-size: 120px;
      text-align: center;
