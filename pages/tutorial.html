@@ -136,9 +136,9 @@
                   <code>
                     <pre>
        async function startProgram() {
-                await spin(1080, 2);
-                await rawMotor(-255, 255, 3);
-            }
+            await spin(1080, 2);
+            await rawMotor(-255, 255, 3);
+          }
           </pre>
                 </code>
                   </div>
@@ -157,8 +157,8 @@
                   <div class="codeblock">
                     <code>
                       <pre>
-                 async function startProgram() {
-                await Sound.play(true);
+        async function startProgram() {
+              await Sound.play(true);
             }
           </pre>
                     </code>
@@ -176,17 +176,17 @@
                   <div class="codeblock">
           <code>
             <pre>
-              async function startProgram() {
-                  await roll(0, 70, 2);
+        async function startProgram() {
+              await roll(0, 70, 2);
             }
           
-             async function onCollision() {
-                  setMainLed({ r: 255, 
-                g: 41, b: 29 });
+        async function onCollision() {
+              setMainLed({ r: 255, 
+              g: 41, b: 29 });
             }
             
-            registerEvent(EventType.onCollision,
-            onCollision);
+        registerEvent(EventType.onCollision,
+        onCollision);
            </pre>
             </code>
                   </div>
@@ -204,20 +204,20 @@
                 <div class="codeblock">
                 <code>
                   <pre>
-              async function startProgram() {
-                  for (var _i0 = 0; _i0 
-                &#60; 5; ++_i0) {
+        async function startProgram() {
+              for (var _i0 = 0; _i0 
+              &#60; 5; ++_i0) {
                 
-              await fade({ r: 43, 
-                g: 255, b: 13 }, 
-                { r: 172, g: 1, 
-                b: 255 }, 1);
+        await fade({ r: 43, 
+              g: 255, b: 13 }, 
+              { r: 172, g: 1, 
+              b: 255 }, 1);
                   
-                await fade({ r: 172, 
-                g: 1, b: 255 }, 
-                { r: 43, g: 255, 
-                b: 13 }, 1);
-              await delay(0.025);
+        await fade({ r: 172, 
+              g: 1, b: 255 }, 
+              { r: 43, g: 255, 
+              b: 13 }, 1);
+        await delay(0.025);
                 }
             }
           </pre>

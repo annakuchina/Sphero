@@ -168,6 +168,10 @@ html {
  * END OF MENU THING
  */
 
+.codesection {
+  padding-top: 100px;
+}
+
 
 code {
   font-size: 12px;
@@ -195,6 +199,7 @@ code {
     height: 0;
     padding-bottom: 56.25%;
   margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .video {
@@ -289,7 +294,7 @@ font-family: 'Cookie', cursive;
   .mainmargin {
         margin-left: 40px;
     margin-right: 40px;
-    padding-top: 100px;
+    padding-top: 0px;
   }
 
  .blogpicture {
@@ -349,7 +354,7 @@ font-family: 'Cookie', cursive;
   }
   
   .header {
-    font-size: 70px;
+    font-size: 100px;
   }
   
   .headerpage {
