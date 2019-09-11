@@ -186,46 +186,6 @@ code {
   position: relative;
 }
 
-.codebox {
-  background: url("https://c1.staticflickr.com/65535/48710186606_efa2295e57_k.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
-  
-}
-
-
-
-.subpagebox {
-  background: rgb(94, 192, 234) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
-  
-}
-
-.subbigheader {
-  font-size: 180px;
-  text-align: center;
-   padding-top: 10vh;
-  color: white;
-font-family: 'Cookie', cursive;
-  text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
-}
-
-.bigheader {
-  font-size: 250px;
-  text-align: center;
-   padding-top: 10vh;
-  color: white;
-font-family: 'Cookie', cursive;
-  text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
-
-}
 
 
 
@@ -248,10 +208,45 @@ font-family: 'Cookie', cursive;
 
 /* MAIN THINGS
  */
-  .aitext {
+  .bigheader {
     font-size: 120px;
-     margin-top: 15vh;
-     line-height: 1.05
+     text-align: center;
+   padding-top: 30vh;
+  color: white;
+font-family: 'Cookie', cursive;
+  text-shadow: 4px 4px 1px rgba(0,0,0,0.1); 
+  }
+
+  .subbigheader {
+    font-size: 100px;
+    text-align: center;
+  font-family: 'Cookie', cursive;
+    padding-top: 25vh;
+    color: white;
+    text-shadow: 4px 4px 1px rgba(0,0,0,0.1);
+    color: white;
+    line-height: 1.05;
+  }
+
+  /* MAIN BLOCKS */
+  .codebox {
+    background: url("https://c1.staticflickr.com/65535/48710186606_efa2295e57_k.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    
+  }
+  
+  
+  .subpagebox {
+    background: rgb(94, 192, 234) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100vh;
   }
 
   .header {
@@ -320,6 +315,7 @@ font-family: 'Cookie', cursive;
 @media screen and (min-width: 660px) {
   .bigheader {
     font-size: 170px;
+    padding-top: 25vh;
   }
 
   .subbigheader {
@@ -358,16 +354,14 @@ font-family: 'Cookie', cursive;
     font-size: 90px;
   }
   
-  .aitext {
-    font-size: 250px;
-  }
 
   .bigheader {
-    font-size: 200px;
+    font-size: 250px;
+    padding-top: 20vh;
   }
 
   .subbigheader {
-    font-size: 140px;
+    font-size: 200px;
   }
   
   .miniheader {
