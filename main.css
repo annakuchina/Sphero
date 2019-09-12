@@ -257,7 +257,7 @@ font-family: 'Cookie', cursive;
 
 
   .codebox {
-    background: url("https://c1.staticflickr.com/65535/48710186606_efa2295e57_k.jpg") no-repeat center center fixed; 
+    background: url("img/mainbackground.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
