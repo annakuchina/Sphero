@@ -9,7 +9,7 @@ body {
 }
 
 p {
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 a {
@@ -257,7 +257,7 @@ font-family: 'Cookie', cursive;
 
 
   .codebox {
-    background: url("img/mainbackground.jpg") no-repeat center center fixed; 
+    background: url("https://c1.staticflickr.com/65535/48710186606_efa2295e57_k.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -336,34 +336,8 @@ font-family: 'Cookie', cursive;
 
 
 
-@media screen and (min-width: 500px) {
- .mainmargin {
-    margin-left: 80px;
-    margin-right: 80px;
-}
-  
-}
 
-@media screen and (min-width: 660px) {
-  .bigheader {
-    font-size: 170px;
-    padding-top: 25vh;
-  }
 
-  .subbigheader {
-    font-size: 120px;
-  }
-
-  .mainmargin {
-    margin-left: 130px;
-    margin-right: 130px;
-}
-  
-  code {
-    font-size: 20px;
-  }
-  
-}
 
 
 @media screen and (min-width: 800px) {
@@ -405,6 +379,45 @@ font-family: 'Cookie', cursive;
   }
 
 }
+
+@media screen and (min-width: 660px) {
+  .bigheader {
+    font-size: 170px;
+    padding-top: 25vh;
+  }
+
+  .subbigheader {
+    font-size: 120px;
+  }
+
+  .mainmargin {
+    margin-left: 130px;
+    margin-right: 130px;
+}
+  
+  code {
+    font-size: 20px;
+  }
+
+  body {
+    font-size: 18px;
+}
+  
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .mainmargin {
+     margin-left: 80px;
+     margin-right: 80px;
+ }
+ 
+  body {
+   font-size: 1px;
+ }
+   
+ }
 
 @media screen and (min-width: 1024px) {
   
